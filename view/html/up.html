@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="view/style/packaged/dist/semantic.css" />
+	<link rel="stylesheet" type="text/css" href="view/style/main.css" />
+	<!--<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no" />-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title><?=strong::$template->getSiteTitle($title)?></title>
+	<link rel="stylesheet" type="text/css" href="view/style/main.css">
+	<script type="text/javascript" src="view/js/audiojs/uppod_flash.js"></script>
+	<script type="text/javascript" src="view/js/audiojs/swfobject.js"></script>
+</head>
+<body>
+<div id="myplayer"></div>
+				<script type="text/javascript">
+					var flashvars = {"uid":"myplayer","m":"video","pl":"{'playlist':[{'file':'/gorizontal/audio/1.mp3','comment':'Океан'},{'file':'/gorizontal/audio/2.mp3','comment':'Марс'},{'file':'/gorizontal/audio/3.mp3','comment':'По зову сердца'},{'file':'/gorizontal/audio/4.mp3','comment':'Мы'},{'file':'/gorizontal/audio/5.mp3','comment':'Там'}]}"};
+					var params = {id:"myplayer",allowFullScreen:"true",allowScriptAccess:"always"}; 
+					new swfobject.embedSWF("/gorizontal/view/js/audiojs/uppod.swf", "myplayer", "300", "50", "9.0.115", false, flashvars, params);
+				</script>
+<div class="ui grid" style="">
+    <div class="sixteen wide column">
+		<div id="blockone">
+		<div class="ui grid">
+			 <div class="sixteen wide column">
+			<div id="img"><img src="/gorizontal/view/pic/logo.png"></div>
+				<div class="ui grid">
+					<div class="five wide column"></div>
+					<div class="two wide column"><img src="/gorizontal/view/pic/player/back.png" onblur="" style="cursor:pointer;" onclick="uppodSend('myplayer','prev');"></div>
+					<div class="two wide column"><img src="/gorizontal/view/pic/player/play.png" style="cursor:pointer;" onclick="if(!play){uppodSend('myplayer','play');var timerId = setTimeout(run,1000);}else {uppodSend('myplayer','pause');stop();};"></div>
+					<div class="two wide column"><img src="/gorizontal/view/pic/player/next.png" style="cursor:pointer;" onclick="next();uppodSend('myplayer','next');"></div>
+					<div class="five wide column"></div>
+					<div class="sixteen wide column center">
+						<div class="progressbar left">&nbsp;<div class="loadingprogressbar" id="audioprogress">&nbsp;</div></div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="sixteen wide column">
+		<div id="blocktwo">
+			<div class="ui grid">
+				<div class="nine wide column"><img src="/gorizontal/view/pic/history.png">
+				<div id="historytext">
+					Группу "Горизонталь" в сентябре 2014 основал уже небезызвестный к тому времени Павел Ладыгин. С 2011 года он занимается созданием акустических композиций, которые ранее презентовал самостоятельно под псевдонимом "LaPa".<br /> 
+					Благодаря легкой аранжировке из клавишных инструментов, перкуссии и басов музыкальные произведения обрели второе дыхание. Уже спустя несколько недель после создания, а именно 6 ноября 2014, проект выпускает свой первый сингл "Мы", который в скором времени становится визитной карточкой группы.<br />
+					Лирические баллады в сочетании с живым звучанием ламповой музыки и глубоким вокалом Павла Ладыгина - душевный и проникновенный софт-рок, находящий самые теплые отклики в сердцах слушателей.
+				</div>
+				</div>
+				<div class="seven wide column">
+					<div class="example">
+					    <ul id="my_sliderone" class="my_slider">
+					      <li><img src="/gorizontal/view/pic/data-images/pic1.jpg"  /></li>  
+					      <li><img src="/gorizontal/view/pic/data-images/pic2.jpg"  /></li>  
+					      <li><img src="/gorizontal/view/pic/data-images/pic3.jpg"  /></li>   
+					    </ul>
+					</div>
+					<div class="example">
+					    <ul id="my_slidertwo" class="my_slider">
+					      <li><img src="/gorizontal/view/pic/data-images/pic3.jpg"  /></li>  
+					      <li><img src="/gorizontal/view/pic/data-images/pic1.jpg"  /></li>  
+					      <li><img src="/gorizontal/view/pic/data-images/pic2.jpg"  /></li>   
+					    </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sixteen wide column">
+		<div id="blocktheree">
+		<div class="ui grid">
+			<div class="nine wide column"><img src="/gorizontal/view/pic/composition.png">
+				<div id="gallery">
+				<div class="ui grid">
+					<div class="eight wide column right">	
+						<div class="ui fade reveal image">						  
+						  <img class="visible content click" src="/gorizontal/view/pic/composition/1.png" class="click" onclick="biografy(1)">						 
+						  <img class="hidden content click" style="filter: alpha(Opacity=50);opacity: 0.5;" src="/gorizontal/view/pic/composition/1.png" class="click" onclick="biografy(1)"><br />
+						</div>
+					</div>
+					<div class="six wide column left">		
+						
+						<div class="ui fade reveal image">						  
+						  <img class="visible content click" src="/gorizontal/view/pic/composition/2.png" class="click" onclick="biografy(2)">						 
+						  <img class="hidden content click" style="filter: alpha(Opacity=50);opacity: 0.5;" src="/gorizontal/view/pic/composition/2.png" class="click" onclick="biografy(2)"><br />
+						</div>
+					
+					</div>
+					<div class="eight wide column right">	
+							
+						<div class="ui fade reveal image">						  
+						  <img class="visible content click" src="/gorizontal/view/pic/composition/3.png" class="click" onclick="biografy(3)">						 
+						  <img class="hidden content click" style="filter: alpha(Opacity=50);opacity: 0.5;" src="/gorizontal/view/pic/composition/3.png" class="click" onclick="biografy(3)"><br />
+						</div>
+					
+					</div>
+					<div class="six wide column left">		
+						
+						<div class="ui fade reveal image">						  
+						  <img class="visible content click" src="/gorizontal/view/pic/composition/4.png" class="click" onclick="biografy(4)">						 
+						  <img class="hidden content click" style="filter: alpha(Opacity=50);opacity: 0.5;" src="/gorizontal/view/pic/composition/4.png" class="click" onclick="biografy(4)"><br />
+						</div>
+					
+					</div>
+					<div class="eight wide column right">	
+						
+						<div class="ui fade reveal image">						  
+						  <img class="visible content click" src="/gorizontal/view/pic/composition/5.png" class="click" onclick="biografy(5)">						 
+						  <img class="hidden content click" style="filter: alpha(Opacity=50);opacity: 0.5;" src="/gorizontal/view/pic/composition/5.png" class="click" onclick="biografy(5)"><br />
+						</div>
+					
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="seven wide column" id="biografy">
+				<div id="biografy1" class="biografy">Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то таммм</div>
+				<div id="biografy2" class="biografy">Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то тамммЧто то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то таммм</div>
+				<div id="biografy3" class="biografy">Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то</div>
+				<div id="biografy4" class="biografy">Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что тоЧто то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то</div>
+				<div id="biografy5" class="biografy">Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там Что то там </div>
+
+			</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="/gorizontal/view/js/main.js"></script>
+<script>
+var i=0;
+var play=false;
+var timerId;
+	function run(){
+		if(i<600){
+			play=true;
+			$("#audioprogress").css("width",i+"px");
+			console.log(i);		
+			i+=(600/283);
+			timerId = setTimeout(run,1000);
+		}else{clearTimeout(timerId);}
+	}
+	function stop(){
+		play=false;
+		clearTimeout(timerId);
+	}
+	function next(){
+		clearTimeout(timerId);
+		i=0;
+		timerId = setTimeout(run,1000);
+
+	}
+</script>

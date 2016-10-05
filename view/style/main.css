@@ -1,0 +1,77 @@
+/*CSS Document*/
+head,body,html,p,h1,h2,h3,h4,h5,h6,select,option{margin:0;padding:0;display: block;}
+body{max-width:1280px;background: #000;margin:0 auto;}
+#blockone{
+    background:#ccc;
+    font:Myriad Pro;
+    background:url('/gorizontal/view/pic/ufsCU-6EHXQ.jpg') no-repeat 50%;
+    height:853px;
+
+}
+#blocktwo{
+    background:#ccc;
+    font:Myriad Pro;
+    background:url('/gorizontal/view/pic/blocktwo.png') no-repeat 50%;
+    height: 867px;
+}
+#blocktheree{
+    background:#ccc;
+    font:Myriad Pro;
+    background:url('/gorizontal/view/pic/blocktheree.png') no-repeat 50%;
+    height: 867px;
+}
+#blockone, #blocktwo, #blocktheree{padding:50px 50px 50px 50px;text-align:center;}
+#img{
+    width:100%;
+}
+#historytext{
+    color:#fff;
+    text-align: left;
+    padding-left:75px;
+}
+.ui.grid > .column:not(.row) {
+  padding: 0px;
+}
+.example{background:rgba(255,255,255,0.15);margin:0px auto;padding:15px;-moz-border-radius: 3px;-webkit-border-radius: 3px}
+.center{text-align: center;}
+.left{text-align: left;margin-left:15px;}
+.right{text-align: right;margin-right:15px;}
+/*My slider styles*/
+.my_slider {
+    height:340px;
+    overflow: hidden;
+    position:relative;
+    list-style: none outside none;
+    padding:0;
+    margin:0;
+}
+.my_slider li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display:none;
+}
+.my_slider li:first-child {
+    display:block;
+}
+#gallery{margin-top:50px;}
+.click{cursor: pointer;}
+.click:hover{background-color:rgba(255,255,255,0.5);}
+#biografy1, #biografy2, #biografy3, #biografy4, #biografy5{display: none;color:#fff;}
+.progressbar{
+
+    width:600px;
+    height:10px;
+    background-color:#fff;
+    margin:50px auto;
+    border:1px solid #000;
+    border-radius:5px 5px 5px 5px;
+}
+.loadingprogressbar{
+    display: inline-block;
+    width:0px;
+    height:8px;
+    background-color:#111;
+    border-radius:5px 5px 5px 5px;
+    margin-left:-5px;
+}

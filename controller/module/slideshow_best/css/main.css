@@ -1,0 +1,17 @@
+/*CSS Document  module-filter*/
+.filter-button{
+
+	background: linear-gradient(to top, #d63333, #fc5d5d) #d63333;
+	background-image: url('../../image/dot.png');
+	background-repeat: no-repeat;
+	background-position: 8px 50%;
+	border:none;
+	border-radius: 5px;
+	padding: 8px 50px 8px 40px;
+	text-transform: uppercase;
+	font-family: HelveticaNeue Bold;
+	font-weight: bold;
+	font-size: 9pt;
+	color:#fff;
+
+}

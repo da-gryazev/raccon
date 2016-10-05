@@ -1,0 +1,27 @@
+body{background:#eee;margin:0;padding:0}
+.example{background:#FFF;width:500px;border:1px #000 solid;margin:20px auto;padding:15px;-moz-border-radius: 3px;-webkit-border-radius: 3px}
+
+/*My slider styles*/
+#my_slider {
+    width:500px;
+    height:340px;
+    overflow: hidden;
+    position:relative;
+    list-style: none outside none;
+    padding:0;
+    margin:0;
+}
+#my_slider li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display:none;
+}
+#my_slider li:first-child {
+    display:block;
+}
+#counter {
+    text-align:right;
+    font-size:16px;
+    width:500px;
+}

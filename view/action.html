@@ -1,0 +1,28 @@
+<?
+switch ($_GET['act']) {
+	case 'addbasket':
+		echo $yes;
+	break;
+
+	case 'showmodule':
+		strong::$template->includeModule($module_title,$data);
+	break;
+
+	case 'findproduct':
+		strong::$template->includeModule($module_title,$data);
+	break;
+
+	case 'searchcountry':
+		for($i=0;$i<count($cities);$i++):?>
+			<option onclick="$('#keycity').val($(this).html());$('#hiddencity').val(this.value);" value="<?=$cities[$i]['id']?>"><?=$cities[$i]['city']?>, <?=$cities[$i]['state']?>, <?=$cities[$i]['region']?> </option>
+		<?endfor;
+	break;
+
+	case 'order':
+		print_r($post);
+		$users = strong::loadModel("users");
+	break;
+
+}
+
+?>
